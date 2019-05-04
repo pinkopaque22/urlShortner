@@ -5,3 +5,4 @@ class ShortenedUrlsControllerTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 end
+USE MINISTEST

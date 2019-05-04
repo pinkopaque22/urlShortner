@@ -6,6 +6,7 @@ class ShortenedUrl < ApplicationRecord
    with: /\A(?:(?:http|https):\/\/)?([-a-zA-Z0-9.]{2,256}\.[a-z]{2,4})\b(?:\/[-a-zA-Z0-9@,!:%_\+.~#?&\/\/=]*)?\z/
 
   before_create :generate_short_url
+  # validate hook here instead of before_create. Instead of changing to look like url, refuse to save it if not a url already
   before_create :sanitize
 
   def generate_short_url
